@@ -1,0 +1,266 @@
+<html>
+<head>
+<title>Map on Crime</title>
+<script type="text/javascript" src="fusioncharts/fusioncharts.js"></script>
+<script type="text/javascript" src="fusioncharts/themes/fusioncharts.theme.fint.js"></script>
+<script type="text/javascript">
+  FusionCharts.ready(function () {
+   var crimeByState = new FusionCharts({
+        "type": "maps/india",
+        "renderAt": "mapContainer",
+        "width": "50%",
+        "height": "100%",
+        "dataFormat": "json",
+        "dataSource": {
+            "map": {
+                "caption": "Incidence of Crime by State",
+                "subcaption": "2013",
+                "entityFillHoverColor": "#cccccc",
+                "numberScaleValue": "1,1000,1000",
+                "numberScaleUnit": "K,M,B",
+                "showLabels": "1",
+                "theme": "fint"
+            },
+            "colorrange": {
+                "minvalue": "0",
+                "startlabel": "Low",
+                "endlabel": "High",
+                "code": "#e44a00",
+                "gradient": "1",
+                "color": [
+                    {
+                        "maxvalue": "25000",
+                        "displayvalue": "Average",
+                        "code": "#f8bd19"
+                    },
+                    {
+                        "maxvalue": "50000",
+                        "code": "#6baa01"
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "id": "001",
+                    "label": "Andaman & Nicobar",
+                    "value": "106"
+                },
+                {
+                    "id": "002",
+                    "label": "Andhra Pradesh",
+                    "value": "32809",
+                    "link": "f-ap-ap.html"
+                },
+                {
+                    "id": "003",
+                    "label": "Arunachal Pradesh",
+                    "value": "288"
+                },
+                {
+                    "id": "004",
+                    "label": "Assam",
+                    "value": "17449",
+                    "link": "f-as-as.html"
+                },
+                {
+                    "id": "005",
+                    "label": "Bihar",
+                    "value": "13609",
+                    "link": "f-bi-bihar.html"
+                },
+                {
+                    "id": "006",
+                    "label": "Chandigarh",
+                    "value": "488"
+                },
+                {
+                    "id": "007",
+                    "label": "Chhattisgarh",
+                    "value": "7012",
+                    "link": "f-ch-ch.html"
+                },
+                {
+                    "id": "008",
+                    "label": "Daman & Diu",
+                    "value": "21"
+                },
+                {
+                    "id": "009",
+                    "label": "Dadra & Nagar Haveli",
+                    "value": "24"
+                },
+                {
+                    "id": "010",
+                    "label": "Delhi",
+                    "value": "12888",
+                    "link": "f-dh-dh.html"
+                },
+                {
+                    "id": "011",
+                    "label": "Goa",
+                    "value": "440"
+                },
+                {
+                    "id": "012",
+                    "label": "Gujarat",
+                    "value": "12283",
+                    "link": "f-gu-guj.html"
+                },
+                {
+                    "id": "013",
+                    "label": "Haryana",
+                    "value": "9089",
+                    "link": "f-ha-har.html"
+                },
+                {
+                    "id": "014",
+                    "label": "Himachal Pradesh",
+                    "value": "1478",
+                },
+                {
+                    "id": "015",
+                    "label": "Jammu & Kashmir",
+                    "value": "3509",
+                    "link": "f-jk-jk.html"
+                },
+                {
+                    "id": "016",
+                    "label": "Jharkhand",
+                    "value": "6506",
+                    "link": "f-jh-jh.html"
+                },
+                {
+                    "id": "017",
+                    "label": "Karnataka",
+                    "value": "12027",
+                    "link": "f-ka-kar.html"
+                },
+                {
+                    "id": "018",
+                    "label": "Kerala",
+                    "value": "11216",
+                    "link": "f-ke-ker.html"
+                },
+                {
+                    "id": "019",
+                    "label": "Lakshadweep",
+                    "value": "3"
+                },
+                {
+                    "id": "020",
+                    "label": "Madhya Pradesh",
+                    "value": "22061",
+                    "link": "f-mp-mp.html"
+                },
+                {
+                    "id": "021",
+                    "label": "Maharashtra",
+                    "value": "24895",
+                    "link": "f-ma-ma.html"
+                },
+                {
+                    "id": "022",
+                    "label": "Manipur",
+                    "value": "285"
+                },
+                {
+                    "id": "023",
+                    "label": "Meghalaya",
+                    "value": "343"
+                },
+                {
+                    "id": "024",
+                    "label": "Mizoram",
+                    "value": "177"
+                },
+                {
+                    "id": "025",
+                    "label": "Nagaland",
+                    "value": "67"
+                },
+                {
+                    "id": "026",
+                    "label": "Odissa",
+                    "value": "14173",
+                    "link": "f-od-od.html"
+                },
+                {
+                    "id": "027",
+                    "label": "Pondicherry",
+                    "value": "86"
+                },
+                {
+                    "id": "028",
+                    "label": "Punjab",
+                    "value": "4994",
+                    "link": "f-pu-pu.html"
+                },
+                {
+                    "id": "029",
+                    "label": "Rajasthan",
+                    "value": "27933",
+                    "link": "f-ra-raj.html"
+                },
+                {
+                    "id": "030",
+                    "label": "Sikkim",
+                    "value": "93"
+                },
+                {
+                    "id": "031",
+                    "label": "Tamilnadu",
+                    "value": "7475",
+                    "link": "f-tn-tn.html"
+                },
+                {
+                    "id": "032",
+                    "label": "Tripura",
+                    "value": "1628"
+                },
+                {
+                    "id": "033",
+                    "label": "Uttar Pradesh",
+                    "value": "32546",
+                    "link": "f-up-up.html"
+                },
+                {
+                    "id": "034",
+                    "label": "Uttarakhand",
+                    "value": "1719",
+                    "link": "f-ut-ut.html"
+                },
+                {
+                    "id": "035",
+                    "label": "West Bengal",
+                    "value": "29826",
+                    "link": "f-wb-wb.html"
+                },
+                {
+                    "id": "036",
+                    "label": "Telengana",
+                    "value": "32809",
+                    "link": "f-ap-ap.html"
+                }
+            ]
+        }
+    });
+    crimeByState.render();
+});
+</script>
+</head>
+<body>
+    <div>
+        <span id="mapContainer">FusionMaps</span>
+        <span>
+            <div>
+                <span id="totalPie"></span>
+                <span id="murderPie"></span>
+            </div>
+            <div>
+                <span id="rapePie"></span>
+                <span id="kidnapPie"></span>
+            </div>
+        </span>
+    </div>
+</body>
+</html>

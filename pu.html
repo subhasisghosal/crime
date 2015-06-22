@@ -1,0 +1,587 @@
+<html>
+<head>
+<title>Crime records of Punjab</title>
+<script type="text/javascript" src="fusioncharts/fusioncharts.js"></script>
+<script type="text/javascript" src="fusioncharts/themes/fusioncharts.theme.zune.js"></script>
+<script type="text/javascript">
+FusionCharts.ready(function(){
+  var murderChart = new FusionCharts({
+      "type": "mscolumnline3d",
+      "renderAt": "murderContainer",
+      "width": "60%",
+      "height": "50%",
+      "dataFormat": "json",
+      "dataSource": {
+        "chart": {
+          "showvalues": "1",
+          "caption": "Victims of Murder",
+          "subCaption": "By Age Group",
+          "xaxisname": "Age Group",
+          "yaxisname": "No.of Victims",
+          "showBorder": "0",
+          "paletteColors": "#0075c2,#1aaf5d,#f2c500",
+          "bgColor": "#ffffff",
+          "canvasBgColor": "#ffffff",
+          "captionFontSize": "14",
+          "subcaptionFontSize": "14",
+          "subcaptionFontBold": "0",
+          "divlineColor": "#999999",
+          "divLineIsDashed": "1",
+          "divLineDashLen": "1",
+          "divLineGapLen": "1",
+          "toolTipColor": "#ffffff",
+          "toolTipBorderThickness": "0",
+          "toolTipBgColor": "#000000",
+          "toolTipBgAlpha": "80",
+          "toolTipBorderRadius": "2",
+          "toolTipPadding": "5",
+          "legendBgColor": "#ffffff",
+          "legendBorderAlpha": "0",
+          "legendShadow": "0",
+          "legendItemFontSize": "10",
+          "legendItemFontColor": "#666666"
+        },
+        "categories": [
+          {
+              "category": [
+                {
+                    "label": "<10 Years"
+                },
+                {
+                    "label": "10-15 Years"
+                },
+                {
+                    "label": "15-18 Years"
+                },
+                {
+                    "label": "18-30 Years"
+                },
+                {
+                    "label": "30-50 Years"
+                },
+                {
+                    "label": ">50 Years"
+                }
+              ]
+          }
+        ],
+        "dataset": [
+          {
+            "seriesname": "Male",
+            "data": [
+                {
+                    "value": "10"
+                },
+                {
+                    "value": "4"
+                },
+                {
+                    "value": "8"
+                },
+                {
+                    "value": "185"
+                },
+                {
+                    "value": "237"
+                },
+                {
+                    "value": "65"
+                }
+            ]
+          },
+          {
+            "seriesname": "Female",
+            "data": [
+                {
+                    "value": "10"
+                },
+                {
+                    "value": "7"
+                },
+                {
+                    "value": "4"
+                },
+                {
+                    "value": "93"
+                },
+                {
+                    "value": "93"
+                },
+                {
+                    "value": "22"
+                }
+            ]
+          },
+          {
+            "seriesname": "Total",
+            "renderAs": "Line",
+            "data": [
+                {
+                    "value": "20"
+                },
+                {
+                    "value": "11"
+                },
+                {
+                    "value": "12"
+                },
+                {
+                    "value": "278"
+                },
+                {
+                    "value": "330"
+                },
+                {
+                    "value": "87"
+                }
+            ]
+          }
+        ]
+      }
+  });
+  var gaugesChart = new FusionCharts({
+        "type": "angulargauge",
+        "renderAt": "gauge1",
+        "width": "30%",
+        "height": "50%",
+        "dataFormat": "json",
+        "dataSource":  {
+          "chart": {
+            "caption": "Murder",
+            "manageresize": "1",
+            "origw": "300",
+            "origh": "300",
+            "palette": "3",
+            "bgcolor": "333333, 453243",
+            "bgalpha": "10",
+            "lowerlimit": "0",
+            "upperlimit": "900",
+            "gaugestartangle": "240",
+            "gaugeendangle": "-60",
+            "gaugeouterradius": "120",
+            "gaugeinnerradius": "60%",
+            "gaugefillmix": "{light-10},{light-30},{light-20},{dark-5},{color},{light-30},{light-20},{dark-10}",
+            "gaugefillratio": "",
+            "basefontcolor": "222222",
+            "tooltipbgcolor": "eeeeee",
+            "tooltipbordercolor": "333333",
+            "decimals": "1",
+            "gaugeoriginx": "150",
+            "gaugeoriginy": "150",
+            "showborder": "0"
+          },
+          "colorrange": {
+            "color": [
+                {
+                    "minvalue": "0",
+                    "maxvalue": "300"
+                },
+                {
+                    "minvalue": "300",
+                    "maxvalue": "600"
+                },
+                {
+                    "minvalue": "600",
+                    "maxvalue": "900"
+                }
+            ]
+          },
+          "dials": {
+            "dial": [
+                {
+                    "id": "Male",
+                    "value": "509",
+                    "basewidth": "6",
+                    "topwidth": "1",
+                    "editmode": "1",
+                    "showvalue": "1",
+                    "rearextension": "10",
+                    "valueX": "150",
+                    "valueY": "90",
+                    "tooltext": "Male Murder : $value",
+                    "bgColor": "108567",
+                    "valueFont": "Arial",
+                    "valueFontSize": "20",
+                    "valueFontColor": "FFFFFF",
+                    "valueFontBold": "1"
+                },
+                {
+                    "id": "Female",
+                    "value": "229",
+                    "basewidth": "6",
+                    "topwidth": "1",
+                    "editmode": "1",
+                    "rearextension": "10",
+                    "showvalue": "1",
+                    "valueX": "110",
+                    "valueY": "140",
+                    "tooltext": "Female Murder : $value",
+                    "bgColor": "ff3398"
+                },
+                {
+                    "id": "Total",
+                    "value": "738",
+                    "basewidth": "6",
+                    "topwidth": "1",
+                    "editmode": "1",
+                    "showvalue": "1",
+                    "rearextension": "10",
+                    "valueX": "170",
+                    "valueY": "150",
+                    "tooltext": "Total Murder : $value",
+                    "bgColor": "000000"
+                }
+            ]
+          }
+        }
+  });
+  var gaugesChart1 = new FusionCharts({
+        "type": "angulargauge",
+        "renderAt": "gauge3",
+        "width": "30%",
+        "height": "50%",
+        "dataFormat": "json",
+        "dataSource":  {
+          "chart": {
+            "caption": "Kidnap",
+            "manageresize": "1",
+            "origw": "300",
+            "origh": "300",
+            "palette": "3",
+            "bgcolor": "333333, 453243",
+            "bgalpha": "10",
+            "lowerlimit": "0",
+            "upperlimit": "1500",
+            "gaugestartangle": "240",
+            "gaugeendangle": "-60",
+            "gaugeouterradius": "120",
+            "gaugeinnerradius": "60%",
+            "gaugefillmix": "{light-10},{light-30},{light-20},{dark-5},{color},{light-30},{light-20},{dark-10}",
+            "gaugefillratio": "",
+            "basefontcolor": "222222",
+            "tooltipbgcolor": "eeeeee",
+            "tooltipbordercolor": "333333",
+            "decimals": "1",
+            "gaugeoriginx": "150",
+            "gaugeoriginy": "150",
+            "showborder": "0"
+          },
+          "colorrange": {
+            "color": [
+                {
+                    "minvalue": "0",
+                    "maxvalue": "500"
+                },
+                {
+                    "minvalue": "500",
+                    "maxvalue": "1000"
+                },
+                {
+                    "minvalue": "1000",
+                    "maxvalue": "1500"
+                }
+            ]
+          },
+          "dials": {
+            "dial": [
+                {
+                    "id": "Male",
+                    "value": "242",
+                    "basewidth": "6",
+                    "topwidth": "1",
+                    "editmode": "1",
+                    "showvalue": "1",
+                    "rearextension": "10",
+                    "valueX": "115",
+                    "valueY": "155",
+                    "tooltext": "Male Kidnap : $value",
+                    "bgColor": "108567",
+                    "valueFont": "Arial",
+                    "valueFontSize": "20",
+                    "valueFontColor": "FFFFFF",
+                    "valueFontBold": "1"
+                },
+                {
+                    "id": "Female",
+                    "value": "1068",
+                    "basewidth": "6",
+                    "topwidth": "1",
+                    "editmode": "1",
+                    "rearextension": "10",
+                    "showvalue": "1",
+                    "valueX": "170",
+                    "valueY": "110",
+                    "tooltext": "Female Kidnap : $value",
+                    "bgColor": "ff3398"
+                },
+                {
+                    "id": "Total",
+                    "value": "1310",
+                    "basewidth": "6",
+                    "topwidth": "1",
+                    "editmode": "1",
+                    "showvalue": "1",
+                    "rearextension": "10",
+                    "valueX": "170",
+                    "valueY": "170",
+                    "tooltext": "Total Kidnap : $value",
+                    "bgColor": "000000"
+                }
+            ]
+          }
+        }
+  });
+  var gaugesChart2 = new FusionCharts({
+        "type": "angulargauge",
+        "renderAt": "gauge2",
+        "width": "30%",
+        "height": "50%",
+        "dataFormat": "json",
+        "dataSource":  {
+          "chart": {
+            "caption": "Rape",
+            "manageresize": "1",
+            "origw": "300",
+            "origh": "300",
+            "palette": "2",
+            "bgcolor": "333333, 453243",
+            "bgalpha": "10",
+            "lowerlimit": "0",
+            "upperlimit": "1000",
+            "gaugestartangle": "240",
+            "gaugeendangle": "-60",
+            "gaugeouterradius": "120",
+            "gaugeinnerradius": "60%",
+            "gaugefillmix": "{light-10},{light-30},{light-20},{dark-5},{color},{light-30},{light-20},{dark-10}",
+            "gaugefillratio": "",
+            "basefontcolor": "222222",
+            "tooltipbgcolor": "eeeeee",
+            "tooltipbordercolor": "333333",
+            "decimals": "1",
+            "gaugeoriginx": "150",
+            "gaugeoriginy": "150",
+            "showborder": "0"
+          },
+          "colorrange": {
+            "color": [
+                {
+                    "minvalue": "0",
+                    "maxvalue": "300"
+                },
+                {
+                    "minvalue": "300",
+                    "maxvalue": "600"
+                },
+                {
+                    "minvalue": "600",
+                    "maxvalue": "1000"
+                }
+            ]
+          },
+          "dials": {
+            "dial": [
+                {
+                    "id": "Total",
+                    "value": "888",
+                    "basewidth": "6",
+                    "topwidth": "1",
+                    "editmode": "1",
+                    "showvalue": "1",
+                    "rearextension": "10",
+                    "valueX": "180",
+                    "valueY": "130",
+                    "tooltext": "Total Rape : $value",
+                    "bgColor": "000000"
+                }
+            ]
+          }
+        }
+  });
+  var rapeChart = new FusionCharts({
+        "type": "column3d",
+        "renderAt": "rapeContainer",
+        "width": "60%",
+        "height": "50%",
+        "dataFormat": "json",
+        "dataSource":  {
+          "chart": {
+            "caption": "Victims of Rape Cases",
+            "subCaption": "By Age Group",
+            "xAxisName": "Age Group",
+            "yAxisName": "No. of Victims",
+            "paletteColors": "#0075c2",
+            "valueFontColor": "#111111",
+            //"baseFont": "Helvetica Neue,Arial",
+            "captionFontSize": "14",
+            "subcaptionFontSize": "14",
+            "subcaptionFontBold": "0",
+            "placeValuesInside": "1",
+            "rotateValues": "1",
+            "showShadow": "0",
+            "divlineColor": "#999999",
+            "divLineDashed": "1",
+            "divlineThickness": "1",
+            "divLineDashLen": "1",
+            "divLineGapLen": "1",
+            "canvasBgColor": "#ffffff"
+          },
+          "data": [
+            {
+                "label": "<10 Years",
+                "value": "38"
+            },
+            {
+                "label": "10-14 Years",
+                "value": "93"
+            },
+            {
+                "label": "14-18 Years",
+                "value": "359"
+            },
+            {
+                "label": "18-30 Years",
+                "value": "286"
+            },
+            {
+                "label": "30-50 Years",
+                "value": "110"
+            },
+            {
+                "label": ">50 Years",
+                "value": "2"
+            }
+          ]
+        }
+  });
+  var kidnapChart = new FusionCharts({
+      "type": "mscolumn3d",
+      "renderAt": "kidnapContainer",
+      "width": "60%",
+      "height": "50%",
+      "dataFormat": "json",
+      "dataSource": {
+        "chart": {
+          "caption": "Victims of Kidnapping & Abduction",
+          "subCaption": "By Age Group",
+          "xAxisName": "Age Group",
+          "yAxisName": "No. of Victims",
+          "paletteColors": "#0075c2,#1aaf5d,#f2c500",
+          "bgColor": "#ffffff",
+          "showBorder": "0",
+          "showCanvasBorder": "0",
+          "usePlotGradientColor": "0",
+          "plotBorderAlpha": "10",
+          "legendBorderAlpha": "0",
+          "legendBgAlpha": "0",
+          "legendShadow": "0",
+          "showHoverEffect": "1",
+          "valueFontColor": "#111111",
+          "rotateValues": "1",
+          "placeValuesInside": "1",
+          "divlineColor": "#999999",
+          "divLineDashed": "1",
+          "divLineDashLen": "1",
+          "divLineGapLen": "1",
+          "canvasBgColor": "#ffffff",
+          "captionFontSize": "14",
+          "subcaptionFontSize": "14",
+          "subcaptionFontBold": "0"
+        },
+        "categories": [
+          {
+              "category": [
+                {
+                    "label": "<10 Years"
+                },
+                {
+                    "label": "10-15 Years"
+                },
+                {
+                    "label": "15-18 Years"
+                },
+                {
+                    "label": "18-30 Years"
+                },
+                {
+                    "label": "30-50 Years"
+                },
+                {
+                    "label": ">50 Years"
+                }
+              ]
+          }
+        ],
+        "dataset": [
+          {
+            "seriesname": "Male",
+            "data": [
+                {
+                    "value": "18"
+                },
+                {
+                    "value": "29"
+                },
+                {
+                    "value": "36"
+                },
+                {
+                    "value": "100"
+                },
+                {
+                    "value": "52"
+                },
+                {
+                    "value": "7"
+                }
+            ]
+          },
+          {
+            "seriesname": "Female",
+            "data": [
+                {
+                    "value": "7"
+                },
+                {
+                    "value": "116"
+                },
+                {
+                    "value": "490"
+                },
+                {
+                    "value": "421"
+                },
+                {
+                    "value": "33"
+                },
+                {
+                    "value": "1"
+                }
+            ]
+          }
+        ]
+      }
+  });
+  murderChart.render();
+  gaugesChart.render();
+  gaugesChart1.render();
+  gaugesChart2.render();
+  rapeChart.render();
+  kidnapChart.render();
+})
+</script>
+</head>
+<body>
+<div>
+  <span id="murderContainer" style="float:left;"></span>
+  <span id="gauge1" style="float:right;"></span>
+</div>
+<div>
+  <span id="rapeContainer" style="float:left;"></span>
+  <span id="gauge2" style="float:right;"></span>
+</div>
+<div>
+  <span id="kidnapContainer" style="float:left;"></span>
+  <span id="gauge3" style="float:right;"></span>
+</div>
+</body>
+</html>
