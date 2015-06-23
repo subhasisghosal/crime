@@ -373,8 +373,136 @@
             ]
         }
     });
+    var rapeDough = new FusionCharts({
+        type: "doughnut3d",
+        renderAt: "rapePie",
+        width: "100%",
+        height: "50%",
+        dataFormat: 'json',
+        dataSource: {
+            "chart": {
+                "caption": "Percentage of Rape in states",
+                "paletteColors": "#0075c2,#1aaf5d,#f2c500,#f45b00,#8e0000,#ff1234,#001234",
+                "bgColor": "#eeeeee",
+                "showBorder": "0",
+                "use3DLighting": "1",
+                "showShadow": "0",
+                "enableSmartLabels": "0",
+                "startingAngle": "310",
+                "showLabels": "0",
+                "showPercentValues": "1",
+                "showLegend": "1",
+                "legendShadow": "0",
+                "legendBorderAlpha": "0",
+                "showlabels": "0",                                
+                "decimals": "2",
+                "captionFontSize": "14",
+                "subcaptionFontSize": "14",
+                "subcaptionFontBold": "0",
+                "toolTipColor": "#ffffff",
+                "toolTipBorderThickness": "0",
+                "toolTipBgColor": "#000000",
+                "toolTipBgAlpha": "80",
+                "toolTipBorderRadius": "2",
+                "pieYScale":"90",
+                "toolTipPadding": "5",
+                "showValues": "0"
+            },
+            "data": [
+                {
+                    "label": "Andhra",
+                    "value": "1636"
+                }, 
+                {
+                    "label": "Assam",
+                    "value": "1937"
+                }, 
+                {
+                    "label": "Bihar",
+                    "value": "1128"
+                }, 
+                {
+                    "label": "Chattisgarh",
+                    "value": "1380"
+                },
+                {
+                    "label": "Delhi",
+                    "value": "1647"
+                }, 
+                {
+                    "label": "Gujarat",
+                    "value": "733"
+                }, 
+                {
+                    "label": "Haryana",
+                    "value": "971"
+                }, 
+                {
+                    "label": "Jammu & k",
+                    "value": "382"
+                }, 
+                {
+                    "label": "Jharkhand",
+                    "value": "1204"
+                }, 
+                {
+                    "label": "karnataka",
+                    "value": "1030"
+                }, 
+                {
+                    "label": "kerala",
+                    "value": "1219"
+                }, 
+                {
+                    "label": "Madhyapradesh",
+                    "value": "4337"
+                }, 
+                {
+                    "label": "Maharashtra",
+                    "value": "3084"
+                }, 
+                {
+                    "label": "Odisha",
+                    "value": "1832"
+                }, 
+                {
+                    "label": "Punjab",
+                    "value": "888"
+                }, 
+                {
+                    "label": "Rajasthan",
+                    "value": "3286"
+                }, 
+                {
+                    "label": "Tamilnadu",
+                    "value": "929"
+                }, 
+                {
+                    "label": "Uttarpradesh",
+                    "value": "3050"
+                }, 
+                {
+                    "label": "Uttrakhand",
+                    "value": "228"
+                }, 
+                {
+                    "label": "Westbengal",
+                    "value": "1685"
+                },
+                {
+                    "label": "Others",
+                    "value": "1072"
+                },
+                {
+                    "label": "Union Territories Except Delhi",
+                    "value": "106",
+                }
+            ]
+        }
+    });
     crimeByState.render();
     totalCrime.render();
+    rapeDough.render();
 });
 </script>
 </head>
