@@ -19,7 +19,7 @@
         "dataSource": {
             "map": {
                 "caption": "Incidence of Crime by State",
-                "subcaption": "2013",
+                "subcaption": "Last Year",
                 "entityFillHoverColor": "#cccccc",
                 "numberScaleValue": "1,1000,1000",
                 "numberScaleUnit": "K,M,B",
@@ -237,7 +237,7 @@
         dataFormat: 'json',
         dataSource: {
             "chart": {
-                "caption": "Crime records since 2007",
+                "caption": "3 Major Crime Trend Since Last 7 Years",
                 "plotgradientcolor": "",
                 "bgcolor": "eeeeee",
                 "showalternatehgridcolor": "0",
@@ -365,12 +365,392 @@
             ]
         }   
     });  
+    var crimePieChart = new FusionCharts({
+        type: 'pie3d',
+        renderAt: 'pieContainer',
+        width: '100%',
+        height: '50%',
+        dataFormat: 'json',
+        dataSource: {
+            "chart": {
+                "caption": "Percent Contribution of Crime",
+                "subCaption": "Major 3 categories",
+                "numberPrefix": "$",
+                "paletteColors": "#0075c2,#1aaf5d,#f2c500,#f45b00,#8e0000",
+                "bgColor": "#ffffff",
+                "showBorder": "0",
+                "use3DLighting": "1",
+                "showShadow": "0",
+                "enableSmartLabels": "0",
+                "startingAngle": "310",
+                "showLabels": "1",
+                "showPercentValues": "1",
+                "showLegend": "1",
+                "legendShadow": "0",
+                "legendBorderAlpha": "0",                                
+                "decimals": "0",
+                "captionFontSize": "14",
+                "subcaptionFontSize": "14",
+                "subcaptionFontBold": "0",
+                "toolTipColor": "#ffffff",
+                "toolTipBorderThickness": "0",
+                "toolTipBgColor": "#000000",
+                "toolTipBgAlpha": "80",
+                "toolTipBorderRadius": "2",
+                "toolTipPadding": "5",
+                "decimals":"2",
+                "PieYScale":"70",
+            },
+            "data": [
+                {
+                    "label": "Kidnapping",
+                    "value": "66461"
+                }, 
+                {
+                    "label": "Murder",
+                    "value": "33901"
+                }, 
+                {
+                    "label": "Rape",
+                    "value": "33764"
+                }
+            ]
+        }
+    });
+    var murderChart = new FusionCharts({
+      "type": "mscolumnline3d",
+      "renderAt": "murderContainer",
+      "width": "100%",
+      "height": "50%",
+      "dataFormat": "json",
+      "dataSource": {
+        "chart": {
+          "showvalues": "1",
+          "caption": "Victims of Murder",
+          "subcaption": "By Age Group",
+          "xaxisname": "Age Group",
+          "yaxisname": "No.of Victims",
+          "showBorder": "0",
+          "paletteColors": "#0075c2,#1aaf5d,#f2c500",
+          "bgColor": "#ffffff",
+          "canvasBgColor": "#ffffff",
+          "captionFontSize": "14",
+          "subcaptionFontSize": "14",
+          "subcaptionFontBold": "0",
+          "divlineColor": "#999999",
+          "divLineIsDashed": "1",
+          "divLineDashLen": "1",
+          "divLineGapLen": "1",
+          "toolTipColor": "#ffffff",
+          "toolTipBorderThickness": "0",
+          "toolTipBgColor": "#000000",
+          "toolTipBgAlpha": "80",
+          "toolTipBorderRadius": "2",
+          "toolTipPadding": "5",
+          "legendBgColor": "#ffffff",
+          "legendBorderAlpha": "0",
+          "legendShadow": "0",
+          "legendItemFontSize": "10",
+          "legendItemFontColor": "#666666"
+        },
+        "categories": [
+          {
+              "category": [
+                {
+                    "label": "<10"
+                },
+                {
+                    "label": "10-15"
+                },
+                {
+                    "label": "15-18"
+                },
+                {
+                    "label": "18-30"
+                },
+                {
+                    "label": "30-50"
+                },
+                {
+                    "label": ">50"
+                }
+              ]
+          }
+        ],
+        "dataset": [
+          {
+            "seriesname": "Male",
+            "data": [
+                 {
+                            "value": "421"
+                        },
+                        {
+                            "value": "223"
+                        },
+                        {
+                            "value": "566"
+                        },
+                        {
+                            "value": "10422"
+                        },
+                        {
+                            "value": "10041"
+                        },
+                        {
+                            "value": "2585"
+                        }
+                        
+                    ]
+                },
+                {
+                    "seriesname": "female",
+                    "data": [
+                        {
+                            "value": "414"
+                        },
+                        {
+                            "value": "170"
+                        },
+                        {
+                            "value": "292"
+                        },
+                        {
+                            "value": "4190"
+                        },
+                        {
+                            "value": "3129"
+                        },
+                        {
+                            "value": "847"
+                        }
+            ]
+          },
+          {
+            "seriesname": "Total",
+            "renderAs": "Line",
+            "data": [
+                {
+                    "value": "835"
+                },
+                {
+                    "value": "393"
+                },
+                {
+                    "value": "858"
+                },
+                {
+                    "value": "14612"
+                },
+                {
+                    "value": "13170"
+                },
+                {
+                    "value": "3432"
+                }
+            ]
+          }
+        ]
+      }
+    });
+    var rapeChart = new FusionCharts({
+        "type": "column3d",
+        "renderAt": "rapeContainer",
+        "width": "100%",
+        "height": "50%",
+        "dataFormat": "json",
+        "dataSource":  {
+          "chart": {
+            "caption": "Victims of Rape Cases",
+            "subCaption": "By Age Group",
+            "xAxisName": "Age Group",
+            "yAxisName": "No. of Victims",          
+            "paletteColors": "#0075c2",
+            "captionFontSize": "14",
+            "subcaptionFontSize": "14",
+            "subcaptionFontBold": "0",
+            "placeValuesInside": "0",
+            "rotateValues": "0",
+            "showShadow": "0",
+            "divlineColor": "#999999",
+            "divLineDashed": "1",
+            "divlineThickness": "1",
+            "divLineDashLen": "1",
+            "divLineGapLen": "1",
+            "canvasBgColor": "#ffffff"
+          },
+          "data": [
+                {
+                    "label": "10",
+                    "value": "1407"
+                }, 
+                {
+                    "label": "10-14",
+                    "value": "2651"
+                }, 
+                {
+                    "label": "14-18",
+                    "value": "8393"
+                }, 
+                {
+                    "label": "18-30",
+                    "value": "14860"
+                }, 
+                {
+                    "label": "30-50",
+                    "value": "4453"
+                }, 
+                {
+                    "label": ">50",
+                    "value": "247"
+                } 
+                
+          ]
+        }
+    });
+    var kidnapChart = new FusionCharts({
+      "type": "mscolumn3d",
+      "renderAt": "kidnapContainer",
+      "width": "100%",
+      "height": "50%",
+      "dataFormat": "json",
+      "dataSource": {
+        "chart": {
+          "caption": "Victims of Kidnapping & Abduction",
+          "subCaption": "By Age Group",
+          "xAxisName": "Age Group",
+          "yAxisName": "No. of Victims",
+          "paletteColors": "#0075c2,#1aaf5d,#f2c500",
+          "bgColor": "#ffffff",
+          "showBorder": "0",
+          "showCanvasBorder": "0",
+          "usePlotGradientColor": "0",
+          "plotBorderAlpha": "10",
+          "legendBorderAlpha": "0",
+          "legendBgAlpha": "0",
+          "legendShadow": "0",
+          "showHoverEffect": "1",
+          "rotateValues": "0",
+          "placeValuesInside": "0",
+          "divlineColor": "#999999",
+          "divLineDashed": "1",
+          "divLineDashLen": "1",
+          "divLineGapLen": "1",
+          "canvasBgColor": "#ffffff",
+          "captionFontSize": "14",
+          "subcaptionFontSize": "14",
+          "subcaptionFontBold": "0"
+        },
+        "categories": [
+          {
+              "category": [
+                {
+                    "label": "<10"
+                },
+                {
+                    "label": "10-15"
+                },
+                {
+                    "label": "15-18"
+                },
+                {
+                    "label": "18-30"
+                },
+                {
+                    "label": "30-50"
+                },
+                {
+                    "label": ">50"
+                }
+              ]
+          }
+        ],
+        "dataset": [
+          {
+            "seriesname": "Male",
+            "data": [
+                {
+                            "value": "671"
+                        },
+                        {
+                            "value": "1209"
+                        },
+                        {
+                            "value": "1673"
+                        },
+                        {
+                            "value": "4853"
+                        },
+                        {
+                            "value": "2470"
+                        },
+                        {
+                            "value": "315"
+                        }
+                        
+                    ]
+                },
+                {
+                    "seriesname": "female",
+                    "data": [
+                        {
+                            "value": "605"
+                        },
+                        {
+                            "value": "4885"
+                        },
+                        {
+                            "value": "17227"
+                        },
+                        {
+                            "value": "20917"
+                        },
+                        {
+                            "value": "4436"
+                        },
+                        {
+                            "value": "119"
+                        }
+            ]
+          }
+        ]
+      }
+    });
+    crimePieChart.render();
+    murderChart.render();
+    kidnapChart.render();
+    rapeChart.render();
     crimeByState.render();
     crimeLineChart.render();
 });
 </script>
 </head>
 <body>
+    <div>
+    <span><h2 align="center">Crime Records of India</h2></span>
+    <span><select id="stateName">
+        <option value="in">India</option>
+        <option value="ap">Andhra Pradesh</option>
+        <option value="as">Assam</option>
+        <option value="bihar">Bihar</option>
+        <option value="ch">Chhattisgarh</option>
+        <option value="dh">Delhi</option>
+        <option value="guj">Gujarat</option>
+        <option value="har">Haryana</option>
+        <option value="jh">Jharkhand</option>
+        <option value="jk">Jammu & Kashmir</option>
+        <option value="kar">Karnataka</option>
+        <option value="ker">Kerala</option>
+        <option value="ma">Maharashtra</option>
+        <option value="mp">Madhya Pradesh</option>
+        <option value="od">Odissa</option>
+        <option value="pu">Punjab</option>
+        <option value="raj">Rajasthan</option>
+        <option value="tn">Tamilnadu</option>
+        <option value="up">Uttar Pradesh</option>
+        <option value="ut">Uttarakhand</option>
+        <option value="wb">West Bengal</option>
+    </select></span>
+    </div>
     <div id="changableInfo" class="container">
         <div class="row">
             <div class="col-md-6" id="pieContainer"></div>
